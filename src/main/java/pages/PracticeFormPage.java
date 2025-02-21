@@ -66,7 +66,8 @@ public class PracticeFormPage extends BasePage {
         return  validateTextInElement(modalMessage, "Thanks for submitting the form");
     }
 
- 
+
+
     private void typeStateCity(String state, String city) {
         inputState.sendKeys(state);
         inputState.sendKeys(Keys.ENTER);

@@ -11,15 +11,17 @@ public class AppManager {
     public WebDriver getDriver() {
         return driver;
     }
+
+
     @BeforeMethod
- public void setup(){
-        driver= new ChromeDriver();
+    public void setup() {
+        driver = new ChromeDriver();
         driver.manage().window().maximize();
     }
-    @AfterMethod
-    public void tearDown(){
-      //  if(driver!=null)
-           // driver.quit();
-    }
 
+    @AfterMethod
+    public void tearDown() {
+//        if (driver != null)
+//            driver.quit();
+    }
 }

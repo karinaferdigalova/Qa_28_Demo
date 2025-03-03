@@ -1,11 +1,6 @@
 package expirience;
 
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.testng.annotations.Test;
-
-public class Exceptions
-{
+public class Exceptions {
     public static void main(String[] args) {
 
         String[] strArray = {"str1", "str2", "str3"};
@@ -19,12 +14,11 @@ public class Exceptions
 
     private static void uncheckedExceptions(String [] strArray){
         try {
-            for (int i = 0; i < 3; i++) {
+            for (int i = 0; i < 5; i++) {
                 System.out.println(strArray[i]);
             }
         }catch (ArrayIndexOutOfBoundsException e){
-//e.printStackTrace(); — это метод класса Throwable в Java, который выводит стек вызовов
-// (trace) исключения в стандартный поток ошибок (System.err).
+            e.printStackTrace();
             System.out.println("created exception");
         }
         System.out.println("program is working");
@@ -39,4 +33,3 @@ public class Exceptions
         Thread.sleep(3000);
     }
 }
-

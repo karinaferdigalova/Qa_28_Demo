@@ -65,8 +65,9 @@ public class PracticeFormPage extends BasePage {
     public boolean validateModalMessage(){
         return  validateTextInElement(modalMessage, "Thanks for submitting the form");
     }
-
-
+    public boolean validateModalMessageNegative(){
+        return  validateTextInElement(modalMessage, "Negative");
+    }
 
     private void typeStateCity(String state, String city) {
         inputState.sendKeys(state);

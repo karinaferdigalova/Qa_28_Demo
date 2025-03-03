@@ -7,7 +7,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.Test;
 
-public class XPathSelectors {
+public class XpathSelectors {
     WebDriver driver = new ChromeDriver();
 
     @Test

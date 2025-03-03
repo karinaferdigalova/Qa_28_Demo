@@ -11,7 +11,6 @@ public class CssSelectors {
     WebDriver driver = new ChromeDriver();
 
 
-
     @Test
     public void selectorsHomePage(){
         driver.get("https://demoqa.com/");
@@ -31,7 +30,7 @@ public class CssSelectors {
         } catch (InterruptedException e) {
             throw new RuntimeException(e);
         }
-        //driver.quit();
+        driver.quit();
     }
 
     @Test
@@ -43,22 +42,13 @@ public class CssSelectors {
         System.out.println(texBox.getAttribute("class"));
         WebElement checkBox = driver.findElement(By.cssSelector("li[id='item-1']"));
         checkBox.click();
+
         try {
             Thread.sleep(4000);
         } catch (InterruptedException e) {
             throw new RuntimeException(e);
         }
-
-//Thread.sleep(4000); — заставляет программу остановиться и подождать 4 секунды.
-//Если что-то прервёт эту паузу (например, другой поток скажет: "Хватит спать, просыпайся!"), программа поймает это событие (InterruptedException e).
-//Вместо того чтобы просто обработать ошибку, программа выбросит новую ошибку (RuntimeException) и скажет: "Произошла проблема, и я не могу продолжить работу."
-//Зачем это нужно?
-//Иногда нужно сделать паузу, например, чтобы:
-//Задержать выполнение программы.
-//Подождать завершения других операций.
-//Если что-то пошло не так (поток прерван), программа сообщает об этом через ошибку.
-
-     //   driver.quit();
+        driver.quit();
     }
 
     @Test
@@ -73,14 +63,13 @@ public class CssSelectors {
         //WebElement radioButtonYes = driver.findElement(By.xpath("//input[@id='yesRadio']"));
         radioButtonYes.click();
 
-
         try {
             Thread.sleep(4000);
         } catch (InterruptedException e) {
             throw new RuntimeException(e);
         }
 
-        //driver.quit();
+        driver.quit();
     }
 
     private void hideBanner(){
